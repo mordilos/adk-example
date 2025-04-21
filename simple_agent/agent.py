@@ -7,7 +7,7 @@ MODEL = "gemma3:4b"
 
 root_agent = Agent(
     name="search_assistant",
-    model=LiteLlm(model=f"ollama/{MODEL}"),
+    model=LiteLlm(model=f"ollama_chat/{MODEL}", api_base="http://ubuntu2404:11434"),
     instruction="You are a helpfull assistant. You always answer the questions only if you definately know the answer.",
     description="A helpful assistant that browses the web for information.",
     tools=[]
